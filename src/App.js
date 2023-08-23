@@ -9,15 +9,18 @@ export default function App() {
   let [posts, setPosts] = useState([
     {
       id : 1,
-      title : "First Title"
+      title : "First Title",
+      status : "ongoing"
     },
     {
       id : 2,
-      title : "Second Title"
+      title : "Second Title",
+      status : "dropped"
     },
     {
       id : 3,
-      title : "Third Title"
+      title : "Third Title",
+      status : "upcoming"
     }
   ]);
   let [showModal, setShowModadl] = useState(false);
