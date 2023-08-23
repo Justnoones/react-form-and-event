@@ -21,6 +21,10 @@ export default function App() {
     }
   ]);
   let [showModal, setShowModadl] = useState(false);
+  let addPost = (post) => {
+    setPosts(prevState => [...prevState, post]);
+    setShowModadl(false);
+  }
   return (
     // react fragment
     <>
@@ -29,7 +33,7 @@ export default function App() {
       <PostsList posts={posts} testData="test data" />
       {showModal && <Modal setShowModadl={setShowModadl} >
         {/* modal content (slots) */}
-        <PostForm />
+        <PostForm addPost={addPost} />
       </Modal>}
     </>
   )
